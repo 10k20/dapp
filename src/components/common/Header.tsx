@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box} from '@mui/material';
+import { Box } from '@mui/material';
 import { DiscordIcon } from '../shared/DiscordIcon';
 import { TwitterIcon } from '../shared/TwitterIcon';
 import { YoutubeIcon } from '../shared/YoutubeIcon';
