@@ -1,11 +1,12 @@
 import * as React from 'react';
 import Container from '@mui/material/Container';
-import { Box, List, ListItem, ListItemText, TextField, Button } from '@mui/material';
+import { Box, List, ListItem, ListItemText, TextField } from '@mui/material';
 import { useState } from 'react';
 import './index.css';
 import Header from './components/common/Header';
 import Intro from './components/common/Intro';
 import { ChildrenList }  from './components/shared/styles/ChildrenList';
+import { StyledButton } from './components/shared/styles/StyledButton';
 import Typography from '@mui/material/Typography';
 import SvgIcon from '@mui/material/SvgIcon';
 
@@ -114,7 +115,7 @@ export default function App() {
           <List>
             {
               childrenList.map((item, index) => (
-                <ListItem disablePadding sx={{display: 'flex'}}>
+                <ListItem disablePadding sx={{display: 'flex', paddingBottom: '0.625rem', marginTop: '0.625rem', borderBottom: '1px solid #CB23E7'}}>
                    <Box>{index}.</Box>
                     <ListItemText >
                       <Typography variant="subtitle1" component="div" ml="0.625rem" mr="1.75rem">{item.address}</Typography>
@@ -130,7 +131,7 @@ export default function App() {
         </ChildrenList>
         <Box display="flex" flexDirection="column" alignItems="flex-end" rowGap="5rem" width="25rem">
           <TextField sx={{width: '100%'}} id="standard-basic" label="Parent Link" variant="standard" />
-          <Button sx={{width: '140px'}} variant="contained">Join</Button>
+          <StyledButton variant="outlined" color="secondary">Join</StyledButton>
         </Box>
       </Box>
     </Container>
